@@ -1,0 +1,22 @@
+{
+  "name": "tweet_cleaner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djiworks/tweet_cleaner.git"
+  },
+  "author": "Djothi Grondin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djiworks/tweet_cleaner/issues"
+  },
+  "homepage": "https://github.com/djiworks/tweet_cleaner#readme",
+  "dependencies": {
+    "twitter": "^1.7.1"
+  }
+}
