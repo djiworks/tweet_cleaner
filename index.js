@@ -19,3 +19,17 @@ client.get('search/tweets', {q: '#ISS #NASA #space #NoutPei'}, (error, tweets) =
     }
   })
 })
+
+client.get('search/tweets', {q: 'https://opendata-reunion.edf.fr #EDF @EDF_Reunion #transitionénergétique'}
+, (error, tweets) => {
+  if(error) throw error;
+  const { statuses } = tweets
+  statuses.forEach(({ id_str, user: { id: userId }}) => {
+    if(`${userId}` === process.env.USER) {
+      client.post(`statuses/destroy/${id_str}`,  (error, tweet) => {
+        if(error) throw error
+        console.info(`Deleted tweet ${id_str}`)
+      });
+    }
+  })
+})
