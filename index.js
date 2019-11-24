@@ -20,7 +20,7 @@ client.get('search/tweets', {q: '#ISS #NASA #space #NoutPei'}, (error, tweets) =
   })
 })
 
-client.get('search/tweets', {q: 'https://opendata-reunion.edf.fr #EDF @EDF_Reunion #transitionénergétique'}
+client.get('search/tweets', {q: 'from:djiworks #EDF'}
 , (error, tweets) => {
   if(error) throw error;
   const { statuses } = tweets
